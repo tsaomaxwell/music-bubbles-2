@@ -20,6 +20,10 @@ function BigBubble(props){
                 <source src={props.song} type = "audio/mpeg" />
                 Music not supported
             </audio>
+            
+            <div className = 'info'>
+                <p></p>{props.info}<p></p>
+            </div>
         </div>
 
         

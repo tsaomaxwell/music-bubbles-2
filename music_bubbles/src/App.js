@@ -12,6 +12,7 @@ function App() {
         childOne = 'Romantic'
         genre = 'Classical'
         song = {classical}
+        info = 'Lasted from roughly 1730 to 1820 and focused on homophonic style and light elegance'
       />
     </div>
   );

@@ -3,15 +3,15 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 300px;
+  width: 500px;
   row-gap: 20px;
   border: 1px solid black;
 }
 .inner {
   background: lightblue;
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
