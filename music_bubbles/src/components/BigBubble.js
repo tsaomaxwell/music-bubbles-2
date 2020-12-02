@@ -16,12 +16,13 @@ function BigBubble(props){
             <div className = 'name'>
                 {props.genre}
             </div>
+            <audio controls>
+                <source src={props.song} type = "audio/mpeg" />
+                Music not supported
+            </audio>
         </div>
 
-        <audio controls>
-            <source src={props.song} type = "audio/mpeg" />
-            Music not supported
-        </audio>
+        
 
         <SmallBubble
             title={childOneName}

@@ -1,6 +1,5 @@
 import './App.css';
 
-import SmallBubble from './components/SmallBubble';
 import BigBubble from './components/BigBubble';
 
 import classical from './audio/mozart.mp3';
@@ -10,7 +9,7 @@ function App() {
     <div className="App">
       <BigBubble 
         parent = 'Baroque'
-        child = 'Romantic'
+        childOne = 'Romantic'
         genre = 'Classical'
         song = {classical}
       />

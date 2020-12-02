@@ -1,4 +1,17 @@
 .Big {
-  max-width: 300px;
   border: 1px solid black;
+}
+.inner {
+  background: lightblue;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.name {
+  display: block;
 }
