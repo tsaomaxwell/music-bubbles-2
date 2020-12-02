@@ -14,7 +14,7 @@ function BigBubble(props){
 
         <div className = 'inner'>
             <div className = 'name'>
-                {props.genre}
+                <p></p>{props.genre}<p></p>
             </div>
             <audio controls>
                 <source src={props.song} type = "audio/mpeg" />

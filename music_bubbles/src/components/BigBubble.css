@@ -1,4 +1,10 @@
 .Big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  row-gap: 20px;
   border: 1px solid black;
 }
 .inner {
@@ -9,6 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   border: 1px solid black;
 }
 
