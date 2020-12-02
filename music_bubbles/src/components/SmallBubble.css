@@ -1,0 +1,9 @@
+.outer {
+  max-width: 300px;
+  border: 1px solid black;
+}
+
+.name {
+  font-weight: bold;
+  font-size: large;
+}
