@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+
+import SmallBubble from './components/SmallBubble';
+import BigBubble from './components/BigBubble';
+
+import classical from './audio/mozart.mp3';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BigBubble 
+        parent = 'Baroque'
+        child = 'Romantic'
+        genre = 'Classical'
+        song = {classical}
+      />
     </div>
   );
 }

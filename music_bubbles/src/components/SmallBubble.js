@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
 import './SmallBubble.css';
 
-function SmallBubble(){
+
+function SmallBubble(props){
+
     return <div className = 'outer'>
         <div className = 'name'>
-            Pop
+            {props.title}
         </div>
     </div>
+    
 }
 
 
