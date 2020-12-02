@@ -3,22 +3,35 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 500px;
+  width: 644px;
   row-gap: 20px;
-  border: 1px solid black;
 }
 .inner {
-  background: lightblue;
+  background: linear-gradient(180deg, #61ddee 0%, rgba(255, 255, 255, 0) 100%),
+    #00b2ca;
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: 644px;
+  height: 644px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid black;
 }
 
 .name {
-  display: block;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  color: #f6f4f5;
+}
+
+.info {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #f6f4f5;
 }

@@ -14,15 +14,16 @@ function BigBubble(props){
 
         <div className = 'inner'>
             <div className = 'name'>
-                <p></p>{props.genre}<p></p>
+                {props.genre}
             </div>
+            <p></p>
             <audio controls>
                 <source src={props.song} type = "audio/mpeg" />
                 Music not supported
             </audio>
-            
+            <p></p>
             <div className = 'info'>
-                <p></p>{props.info}<p></p>
+                {props.info}
             </div>
         </div>
 
