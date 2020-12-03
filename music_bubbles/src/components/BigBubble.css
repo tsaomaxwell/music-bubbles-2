@@ -35,3 +35,7 @@
   line-height: 29px;
   color: #f6f4f5;
 }
+
+.container {
+  visibility: hidden;
+}
