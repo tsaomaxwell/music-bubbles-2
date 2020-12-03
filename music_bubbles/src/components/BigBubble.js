@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState , useRef } from 'react'
 //mport ReactDOM from 'react-dom'
 //import CSVReader from 'react-csv-reader'
 import './BigBubble.css';
 import SmallBubble from './SmallBubble.js'
 
+import romantic from '../audio/salutdamour.mp3';
 
 
 function BigBubble(props){
@@ -11,14 +12,24 @@ function BigBubble(props){
     const [childOneName, setChildOneName] = useState(props.childOne);// update later for array handling
     const [mainName, setMainName] = useState(props.genre);
     const [musicInfo, setMusicInfo] = useState(props.info);
-    const [playSong, setPlaySong] = useState(props.song);
+    const [source, setSource] = useState(props.song);
+
+    const audioRef = useRef();
+    const updateSong = (source) => {
+        setSource(source);
+        if(audioRef.current){
+            audioRef.current.pause();
+            audioRef.current.load();
+            audioRef.current.play();
+        }
+    }
     
     function getBubble(props){
         setParentsName("Classical");
         setChildOneName("Impressionist");
         setMainName("Romantic");
         setMusicInfo("It's all in the name. 1830-1900");
-
+        updateSong(romantic);
         console.log("clicked");
     
     }
@@ -34,8 +45,8 @@ function BigBubble(props){
                 {mainName}
             </div>
             <p></p>
-            <audio controls>
-                <source src={playSong} type = "audio/mpeg" />
+            <audio controls ref={audioRef}>
+                <source src={source} type = "audio/mpeg" />
                 Music not supported
             </audio>
             <p></p>
