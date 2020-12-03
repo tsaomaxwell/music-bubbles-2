@@ -8,12 +8,14 @@ import romantic from '../audio/salutdamour.mp3';
 
 
 function BigBubble(props){
+    //all the states needed to change the bubble contents
     const [parentsName, setParentsName] = useState(props.parent); // update later to array handling
     const [childOneName, setChildOneName] = useState(props.childOne);// update later for array handling
     const [mainName, setMainName] = useState(props.genre);
     const [musicInfo, setMusicInfo] = useState(props.info);
     const [source, setSource] = useState(props.song);
 
+    //create handling to reload the song in each bubble change
     const audioRef = useRef();
     const updateSong = (source) => {
         setSource(source);
@@ -24,6 +26,8 @@ function BigBubble(props){
         }
     }
     
+    //get the next bubble and change the state for all bubbles
+    //currently doesnt do that. place holder for now. needs some sort of array handling
     function getBubble(props){
         setParentsName("Classical");
         setChildOneName("Impressionist");
