@@ -39,12 +39,12 @@ function BigBubble(props){
     }
 
     return <div className = "Big">
-        <button className='container' onClick={getBubble(parentsName)}>
-            <SmallBubble
+
+        <SmallBubble
                 title={parentsName}
                 onClick={getBubble}
-            />
-        </button>
+        />
+
 
         <div className = 'inner'>
             <div className = 'name'>
@@ -63,11 +63,12 @@ function BigBubble(props){
 
         
 
-        <button className='container' onClick={getBubble(childOneName)}>
-            <SmallBubble
+
+         <SmallBubble
             title={childOneName}
-            />
-        </button>
+            onClick={getBubble}
+        />
+
     </div>
 
 
