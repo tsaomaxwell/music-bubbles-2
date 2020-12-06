@@ -2,8 +2,8 @@
   background: linear-gradient(180deg, #61ddee 0%, rgba(255, 255, 255, 0) 100%),
     #00b2ca;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 19vw;
+  height: 19vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,9 @@
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 29px;
+  font-size: 3vw;
+  line-height: 3.2vw;
   color: #f6f4f5;
 }
+
+

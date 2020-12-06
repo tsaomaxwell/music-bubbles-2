@@ -3,9 +3,17 @@ import React, { useState , useRef } from 'react'
 //import CSVReader from 'react-csv-reader'
 import './BigBubble.css';
 import SmallBubble from './SmallBubble.js'
-
+import { readString } from 'react-papaparse';
 import romantic from '../audio/salutdamour.mp3';
 
+
+const bubbles = `name,description,audio file name,parent,child
+"Medieval","Created Western classical nomenclature, i.e. Music Theory","../audio/JeVivroieLiement-GuillaumeDeMachaut.mp3","","Renaissance"
+"Renaissance","Range, rhythm, harmony, and form expanded, but dissonance was frowned upon.","../audio/D'oùVientCelaBelle-ClaudindeSermisy.mp3","Medieval","Baroque"
+"Baroque","Ornate, fugues, counterpoint, and more: decorated and mathematically perfect.","../audio/LittleFugueInGMinor-JSBach.mp3","Renaissance","Classical"`;
+const list = readString(bubbles, {header:true});
+var currentRow = 0;
+const MAX_GENRES = 3;
 
 function BigBubble(props){
     //all the states needed to change the bubble contents
@@ -18,6 +26,7 @@ function BigBubble(props){
     //create handling to reload the song in each bubble change
     const audioRef = useRef();
     const updateSong = (source) => {
+        /*let source = new Audio(list.data[curretRow]["audio file name"])*/
         setSource(source);
         if(audioRef.current){
             audioRef.current.pause();
@@ -25,24 +34,50 @@ function BigBubble(props){
             audioRef.current.play();
         }
     }
+
+    function getOldBubble(props){
+        currentRow--; //place where changing currentRow will happen
+        if(currentRow > -1)
+        {
+            setParentsName(list.data[currentRow]["parent"]);
+            setChildOneName(list.data[currentRow]["child"]);
+            setMainName(list.data[currentRow]["name"]);
+            setMusicInfo(list.data[currentRow]["description"]);
+            updateSong(romantic);
+            console.log("clicked");
+        }
+        else
+        {
+            (currentRow++);
+        }
+    }
     
     //get the next bubble and change the state for all bubbles
     //currently doesnt do that. place holder for now. needs some sort of array handling
-    function getBubble(props){
-        setParentsName("Classical");
-        setChildOneName("Impressionist");
-        setMainName("Romantic");
-        setMusicInfo("It's all in the name. 1830-1900");
-        updateSong(romantic);
-        console.log("clicked");
-    
+    function getNewBubble(props){
+        currentRow++; //place where changing currentRow will happen
+        if(currentRow < MAX_GENRES)
+        {
+            setParentsName(list.data[currentRow]["parent"]);
+            setChildOneName(list.data[currentRow]["child"]);
+            setMainName(list.data[currentRow]["name"]);
+            setMusicInfo(list.data[currentRow]["description"]);
+            updateSong(romantic);
+            console.log("clicked");
+        }
+        else
+        {
+            (currentRow--);
+        }
     }
 
     return <div className = "Big">
+
         <SmallBubble
-            title={parentsName}
-            onClick={getBubble}
+                title={parentsName}
+                onClick={getOldBubble}
         />
+
 
         <div className = 'inner'>
             <div className = 'name'>
@@ -59,17 +94,13 @@ function BigBubble(props){
             </div>
         </div>
 
-        
-
-        <button className='container' onClick={getBubble}>
-            <SmallBubble
+         <SmallBubble
             title={childOneName}
-            />
-        </button>
-    </div>
+            onClick={getNewBubble}
+        />
 
+    </div>
 
 }
 
-
-export default BigBubble;
+export default BigBubble
