@@ -4,16 +4,28 @@ import React, { useState , useRef } from 'react'
 import './BigBubble.css';
 import SmallBubble from './SmallBubble.js'
 import { readString } from 'react-papaparse';
-import romantic from '../audio/salutdamour.mp3';
+import Medieval from '../audio/JeVivroieLiement-GuillaumeDeMachaut.mp3'
+import Renaissance from "../audio/D'oùVientCelaBelle-ClaudindeSermisy.mp3"
+import Baroque from '../audio/LittleFugueInGMinor-JSBach.mp3'
+import Classical from '../audio/mozart.mp3'
+import EarlyRomantic from '../audio/Serenade-Schubert.mp3'
+import Romantic from "../audio/CarmenOverture-Bizet.mp3"
+import Impressionist from '../audio/ClairDeLune-ClaudeDebussy.mp3'
+import Contemporary from '../audio/StringQuarterNo8-BenJohnston.mp3'
 
-
+const songs = [Medieval, Renaissance, Baroque, Classical, EarlyRomantic, Romantic, Impressionist, Contemporary]
 const bubbles = `name,description,audio file name,parent,child
 "Medieval","Created Western classical nomenclature, i.e. Music Theory","../audio/JeVivroieLiement-GuillaumeDeMachaut.mp3","","Renaissance"
 "Renaissance","Range, rhythm, harmony, and form expanded, but dissonance was frowned upon.","../audio/D'oùVientCelaBelle-ClaudindeSermisy.mp3","Medieval","Baroque"
-"Baroque","Ornate, fugues, counterpoint, and more: decorated and mathematically perfect.","../audio/LittleFugueInGMinor-JSBach.mp3","Renaissance","Classical"`;
+"Baroque","Ornate, fugues, counterpoint, and more: decorated and mathematically perfect.","../audio/LittleFugueInGMinor-JSBach.mp3","Renaissance","Classical"
+"Classical","Focusing on simplicity and elegance in homophonic style. Long Live Mozart","../audio/mozart.mp3","Baroque","Early Romantic"
+"Early Romantic","Oh amore mio, che meraviglia e lirica.","../audio/Serenade-Schubert.mp3","Classical","Romantic"
+"Romantic","Intense, emotional, Opera-tic: Exaggeration is the name, and Tchaikofsky is a brain.","../audio/CarmenOverture-Bizert.mp3","Early Romantic","Impressionist"
+"Impressionist","Colorful, atonal, and valuing the artist's voice above all else.","../audio/ClairDeLune-ClaudeDebussy","Romantic","Contemporary","../audio/ClairDeLune-ClaudeDebussy"
+"Contemporary","Begone limitations, it's our time to stretch the horizons.","../audio/StringQuartetNo8-BenJohnston.mp3","Impressionist",""`;
 const list = readString(bubbles, {header:true});
 var currentRow = 0;
-const MAX_GENRES = 3;
+const MAX_GENRES = 8;
 
 function BigBubble(props){
     //all the states needed to change the bubble contents
@@ -25,9 +37,8 @@ function BigBubble(props){
 
     //create handling to reload the song in each bubble change
     const audioRef = useRef();
-    const updateSong = (source) => {
-        /*let source = new Audio(list.data[curretRow]["audio file name"])*/
-        setSource(source);
+    const updateSong = (sourceName) => {
+        setSource(sourceName)
         if(audioRef.current){
             audioRef.current.pause();
             audioRef.current.load();
@@ -43,7 +54,8 @@ function BigBubble(props){
             setChildOneName(list.data[currentRow]["child"]);
             setMainName(list.data[currentRow]["name"]);
             setMusicInfo(list.data[currentRow]["description"]);
-            updateSong(romantic);
+            /*updateSong(list.data[currentRow]["audio file name"]);*/
+            updateSong(songs[currentRow]);
             console.log("clicked");
         }
         else
@@ -62,7 +74,7 @@ function BigBubble(props){
             setChildOneName(list.data[currentRow]["child"]);
             setMainName(list.data[currentRow]["name"]);
             setMusicInfo(list.data[currentRow]["description"]);
-            updateSong(romantic);
+            updateSong(songs[currentRow]);
             console.log("clicked");
         }
         else
