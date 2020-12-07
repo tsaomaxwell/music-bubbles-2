@@ -1,24 +1,30 @@
 {
   "files": {
-    "main.css": "/music-bubbles-2/static/css/main.caa831ff.chunk.css",
-    "main.js": "/music-bubbles-2/static/js/main.ac8a36f0.chunk.js",
-    "main.js.map": "/music-bubbles-2/static/js/main.ac8a36f0.chunk.js.map",
-    "runtime-main.js": "/music-bubbles-2/static/js/runtime-main.06dd61ae.js",
-    "runtime-main.js.map": "/music-bubbles-2/static/js/runtime-main.06dd61ae.js.map",
-    "static/js/2.ce640d15.chunk.js": "/music-bubbles-2/static/js/2.ce640d15.chunk.js",
-    "static/js/2.ce640d15.chunk.js.map": "/music-bubbles-2/static/js/2.ce640d15.chunk.js.map",
-    "static/js/3.6c5c7cb2.chunk.js": "/music-bubbles-2/static/js/3.6c5c7cb2.chunk.js",
-    "static/js/3.6c5c7cb2.chunk.js.map": "/music-bubbles-2/static/js/3.6c5c7cb2.chunk.js.map",
+    "main.css": "/music-bubbles-2/static/css/main.c5759bc2.chunk.css",
+    "main.js": "/music-bubbles-2/static/js/main.d185eef7.chunk.js",
+    "main.js.map": "/music-bubbles-2/static/js/main.d185eef7.chunk.js.map",
+    "runtime-main.js": "/music-bubbles-2/static/js/runtime-main.b2eb8bef.js",
+    "runtime-main.js.map": "/music-bubbles-2/static/js/runtime-main.b2eb8bef.js.map",
+    "static/js/2.926a3de4.chunk.js": "/music-bubbles-2/static/js/2.926a3de4.chunk.js",
+    "static/js/2.926a3de4.chunk.js.map": "/music-bubbles-2/static/js/2.926a3de4.chunk.js.map",
+    "static/js/3.50c151c0.chunk.js": "/music-bubbles-2/static/js/3.50c151c0.chunk.js",
+    "static/js/3.50c151c0.chunk.js.map": "/music-bubbles-2/static/js/3.50c151c0.chunk.js.map",
     "index.html": "/music-bubbles-2/index.html",
-    "static/css/main.caa831ff.chunk.css.map": "/music-bubbles-2/static/css/main.caa831ff.chunk.css.map",
-    "static/js/2.ce640d15.chunk.js.LICENSE.txt": "/music-bubbles-2/static/js/2.ce640d15.chunk.js.LICENSE.txt",
-    "static/media/mozart.6e966921.mp3": "/music-bubbles-2/static/media/mozart.6e966921.mp3",
-    "static/media/salutdamour.d8cf56d5.mp3": "/music-bubbles-2/static/media/salutdamour.d8cf56d5.mp3"
+    "static/css/main.c5759bc2.chunk.css.map": "/music-bubbles-2/static/css/main.c5759bc2.chunk.css.map",
+    "static/js/2.926a3de4.chunk.js.LICENSE.txt": "/music-bubbles-2/static/js/2.926a3de4.chunk.js.LICENSE.txt",
+    "static/media/CarmenOverture-Bizet.4f6983ce.mp3": "/music-bubbles-2/static/media/CarmenOverture-Bizet.4f6983ce.mp3",
+    "static/media/ClairDeLune-ClaudeDebussy.e777a3a3.mp3": "/music-bubbles-2/static/media/ClairDeLune-ClaudeDebussy.e777a3a3.mp3",
+    "static/media/D'oùVientCelaBelle-ClaudindeSermisy.b678a094.mp3": "/music-bubbles-2/static/media/D'oùVientCelaBelle-ClaudindeSermisy.b678a094.mp3",
+    "static/media/JeVivroieLiement-GuillaumeDeMachaut.e34985eb.mp3": "/music-bubbles-2/static/media/JeVivroieLiement-GuillaumeDeMachaut.e34985eb.mp3",
+    "static/media/LittleFugueInGMinor-JSBach.89c4dd4e.mp3": "/music-bubbles-2/static/media/LittleFugueInGMinor-JSBach.89c4dd4e.mp3",
+    "static/media/Serenade-Schubert.a5157acc.mp3": "/music-bubbles-2/static/media/Serenade-Schubert.a5157acc.mp3",
+    "static/media/StringQuarterNo8-BenJohnston.e3a7e6e4.mp3": "/music-bubbles-2/static/media/StringQuarterNo8-BenJohnston.e3a7e6e4.mp3",
+    "static/media/mozart.6e966921.mp3": "/music-bubbles-2/static/media/mozart.6e966921.mp3"
   },
   "entrypoints": [
-    "static/js/runtime-main.06dd61ae.js",
-    "static/js/2.ce640d15.chunk.js",
-    "static/css/main.caa831ff.chunk.css",
-    "static/js/main.ac8a36f0.chunk.js"
+    "static/js/runtime-main.b2eb8bef.js",
+    "static/js/2.926a3de4.chunk.js",
+    "static/css/main.c5759bc2.chunk.css",
+    "static/js/main.d185eef7.chunk.js"
   ]
 }
