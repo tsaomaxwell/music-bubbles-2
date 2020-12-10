@@ -15,16 +15,16 @@ import Contemporary from '../audio/StringQuarterNo8-BenJohnston.mp3'
 
 const songs = [Medieval, Renaissance, Baroque, Classical, EarlyRomantic, Romantic, Impressionist, Contemporary]
 const bubbles = `name,description,audio file name,parent,child
-"Medieval","Created Western classical nomenclature, i.e. Music Theory","../audio/JeVivroieLiement-GuillaumeDeMachaut.mp3","","Renaissance"
-"Renaissance","Range, rhythm, harmony, and form expanded, but dissonance was frowned upon.","../audio/D'oùVientCelaBelle-ClaudindeSermisy.mp3","Medieval","Baroque"
-"Baroque","Ornate, fugues, counterpoint, and more: decorated and mathematically perfect.","../audio/LittleFugueInGMinor-JSBach.mp3","Renaissance","Classical"
-"Classical","Focusing on simplicity and elegance in homophonic style. Long Live Mozart","../audio/mozart.mp3","Baroque","Early Romantic"
-"Early Romantic","Oh amore mio, che meraviglia e lirica.","../audio/Serenade-Schubert.mp3","Classical","Romantic"
-"Romantic","Intense, emotional, Opera-tic: Exaggeration is the name, and Tchaikofsky is a brain.","../audio/CarmenOverture-Bizert.mp3","Early Romantic","Impressionist"
-"Impressionist","Colorful, atonal, and valuing the artist's voice above all else.","../audio/ClairDeLune-ClaudeDebussy","Romantic","Contemporary","../audio/ClairDeLune-ClaudeDebussy"
-"Contemporary","Begone limitations, it's our time to stretch the horizons.","../audio/StringQuartetNo8-BenJohnston.mp3","Impressionist",""`;
+"Medieval","Created Western classical nomenclature, i.e. Music Theory. (500-1420)","../audio/JeVivroieLiement-GuillaumeDeMachaut.mp3","","Renaissance"
+"Renaissance","Range, rhythm, harmony, and form expanded, but dissonance was frowned upon. (1400-1600)","../audio/D'oùVientCelaBelle-ClaudindeSermisy.mp3","Medieval","Baroque"
+"Baroque","Ornate, fugues, counterpoint, and more: decorated and mathematically perfect. (1600-1750)","../audio/LittleFugueInGMinor-JSBach.mp3","Renaissance","Classical"
+"Classical","Focusing on simplicity and elegance in homophonic style. Long Live Mozart. (1750-1820)","../audio/mozart.mp3","Baroque","Early Romantic"
+"Early Romantic","Oh amore mio, che meraviglia e lirica. (1770-1840)","../audio/Serenade-Schubert.mp3","Classical","Romantic"
+"Romantic","Intense, emotional, Opera-tic: Exaggeration is the name, and Tchaikofsky is a brain. (1800-1910)","../audio/CarmenOverture-Bizert.mp3","Early Romantic","Impressionist"
+"Impressionist","Colorful, atonal, and valuing the artist's voice above all else. (1890-1925)","../audio/ClairDeLune-ClaudeDebussy","Romantic","Postmodern/ Contemporary"
+"Postmodern/ Contemporary","Begone limitations, it's our time to stretch the horizons. (1950-Present)","../audio/StringQuartetNo8-BenJohnston.mp3","Impressionist",""`;
 const list = readString(bubbles, {header:true});
-var currentRow = 0;
+var currentRow = -1;
 const MAX_GENRES = 8;
 
 function BigBubble(props){

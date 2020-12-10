@@ -12,7 +12,7 @@
   background: linear-gradient(180deg, #61ddee 0%, rgba(255, 255, 255, 0) 100%),
     #00b2ca;
   border-radius: 50%;
-  padding: .5vw;
+  padding: 1vw;
   width: 60vw;
   height: 60vw;
   display: flex;
@@ -26,7 +26,6 @@
   font-style: normal;
   font-weight: bold;
   font-size: 9vw;
-  line-height: 4vw;
   color: #f6f4f5;
 
 }
@@ -36,7 +35,6 @@
   font-style: normal;
   font-weight: 500;
   font-size: 3vw;
-  line-height: 3.2vw;
   color: #f6f4f5;
 }
 
