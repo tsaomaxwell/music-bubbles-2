@@ -21,7 +21,7 @@ const bubbles = `name,description,audio file name,parent,child
 "Baroque","Ornate, fugues, counterpoint, and more: decorated and mathematically perfect. (1600-1750)","../audio/LittleFugueInGMinor-JSBach.mp3","Renaissance","Classical"
 "Classical","Focusing on simplicity and elegance in homophonic style. Long Live Mozart. (1750-1820)","../audio/mozart.mp3","Baroque","Early Romantic"
 "Early Romantic","Oh amore mio, che meraviglia e lirica. (1770-1840)","../audio/Serenade-Schubert.mp3","Classical","Romantic"
-"Romantic","Intense, emotional, Opera-tic: Exaggeration is the name, and Tchaikofsky is a brain. (1800-1910)","../audio/CarmenOverture-Bizert.mp3","Early Romantic","Impressionist"
+"Romantic","Intense, emotional, Opera-esque: Exaggeration is the name, and Tchaikofsky is a brain. (1800-1910)","../audio/CarmenOverture-Bizert.mp3","Early Romantic","Impressionist"
 "Impressionist","Colorful, atonal, and valuing the artist's voice above all else. (1890-1925)","../audio/ClairDeLune-ClaudeDebussy","Romantic","Postmodern/ Contemporary"
 "Postmodern/ Contemporary","Begone limitations, it's our time to stretch the horizons. (1950-Present)","../audio/StringQuartetNo8-BenJohnston.mp3","Impressionist","The End"
 "Thanks for watching!","Design: Taylor Che; Development: Jakob Reinwald, Maxwell Tsao","./audio/starter.mp3","Go Back",""
