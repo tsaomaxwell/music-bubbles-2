@@ -12,8 +12,9 @@ import EarlyRomantic from '../audio/Serenade-Schubert.mp3'
 import Romantic from "../audio/CarmenOverture-Bizet.mp3"
 import Impressionist from '../audio/ClairDeLune-ClaudeDebussy.mp3'
 import Contemporary from '../audio/StringQuarterNo8-BenJohnston.mp3'
+import starter from '../audio/starter.mp3'
 
-const songs = [Medieval, Renaissance, Baroque, Classical, EarlyRomantic, Romantic, Impressionist, Contemporary]
+const songs = [Medieval, Renaissance, Baroque, Classical, EarlyRomantic, Romantic, Impressionist, Contemporary, starter]
 const bubbles = `name,description,audio file name,parent,child
 "Medieval","Created Western classical nomenclature, i.e. Music Theory. (500-1420)","../audio/JeVivroieLiement-GuillaumeDeMachaut.mp3","","Renaissance"
 "Renaissance","Range, rhythm, harmony, and form expanded, but dissonance was frowned upon. (1400-1600)","../audio/D'oùVientCelaBelle-ClaudindeSermisy.mp3","Medieval","Baroque"
@@ -22,10 +23,12 @@ const bubbles = `name,description,audio file name,parent,child
 "Early Romantic","Oh amore mio, che meraviglia e lirica. (1770-1840)","../audio/Serenade-Schubert.mp3","Classical","Romantic"
 "Romantic","Intense, emotional, Opera-tic: Exaggeration is the name, and Tchaikofsky is a brain. (1800-1910)","../audio/CarmenOverture-Bizert.mp3","Early Romantic","Impressionist"
 "Impressionist","Colorful, atonal, and valuing the artist's voice above all else. (1890-1925)","../audio/ClairDeLune-ClaudeDebussy","Romantic","Postmodern/ Contemporary"
-"Postmodern/ Contemporary","Begone limitations, it's our time to stretch the horizons. (1950-Present)","../audio/StringQuartetNo8-BenJohnston.mp3","Impressionist",""`;
+"Postmodern/ Contemporary","Begone limitations, it's our time to stretch the horizons. (1950-Present)","../audio/StringQuartetNo8-BenJohnston.mp3","Impressionist","The End"
+"Thanks for watching!","Design: Taylor Che; Development: Jakob Reinwald, Maxwell Tsao","./audio/starter.mp3","Go Back",""
+`;
 const list = readString(bubbles, {header:true});
 var currentRow = -1;
-const MAX_GENRES = 8;
+const MAX_GENRES = 9;
 
 function BigBubble(props){
     //all the states needed to change the bubble contents
