@@ -7,18 +7,18 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  row-gap: 20px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2px;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 .inner {
   background: linear-gradient(180deg, #61ddee 0%, rgba(255, 255, 255, 0) 100%),
     #00b2ca;
   border-radius: 50%;
-  padding: 1vw;
-  width: 60vw;
-  height: 60vw;
+  padding: 1vmin;
+  width: 60vmin;
+  height: 60vmin;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,16 +29,15 @@ body{
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 9vw;
+  font-size: 9vmin;
   color: #f6f4f5;
-
 }
 
 .info {
   font-family: Montserrat;
   font-style: normal;
-  font-weight: 500;
-  font-size: 3vw;
+  font-weight: 9vmin;
+  font-size: 3vmin;
   color: #f6f4f5;
 }
 
