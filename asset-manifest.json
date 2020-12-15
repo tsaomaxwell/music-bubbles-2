@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/music-bubbles-2/static/css/main.4606c01d.chunk.css",
+    "main.css": "/music-bubbles-2/static/css/main.d462218d.chunk.css",
     "main.js": "/music-bubbles-2/static/js/main.542d6443.chunk.js",
     "main.js.map": "/music-bubbles-2/static/js/main.542d6443.chunk.js.map",
     "runtime-main.js": "/music-bubbles-2/static/js/runtime-main.b2eb8bef.js",
@@ -10,7 +10,7 @@
     "static/js/3.50c151c0.chunk.js": "/music-bubbles-2/static/js/3.50c151c0.chunk.js",
     "static/js/3.50c151c0.chunk.js.map": "/music-bubbles-2/static/js/3.50c151c0.chunk.js.map",
     "index.html": "/music-bubbles-2/index.html",
-    "static/css/main.4606c01d.chunk.css.map": "/music-bubbles-2/static/css/main.4606c01d.chunk.css.map",
+    "static/css/main.d462218d.chunk.css.map": "/music-bubbles-2/static/css/main.d462218d.chunk.css.map",
     "static/js/2.926a3de4.chunk.js.LICENSE.txt": "/music-bubbles-2/static/js/2.926a3de4.chunk.js.LICENSE.txt",
     "static/media/CarmenOverture-Bizet.4f6983ce.mp3": "/music-bubbles-2/static/media/CarmenOverture-Bizet.4f6983ce.mp3",
     "static/media/ClairDeLune-ClaudeDebussy.e777a3a3.mp3": "/music-bubbles-2/static/media/ClairDeLune-ClaudeDebussy.e777a3a3.mp3",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.b2eb8bef.js",
     "static/js/2.926a3de4.chunk.js",
-    "static/css/main.4606c01d.chunk.css",
+    "static/css/main.d462218d.chunk.css",
     "static/js/main.542d6443.chunk.js"
   ]
 }
