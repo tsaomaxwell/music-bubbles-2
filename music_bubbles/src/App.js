@@ -38,16 +38,16 @@ function App() {
     return (
       <div className="App">
         <BigBubble 
-          /*parent = {results.data[0]["parent"]}
+          parent = {results.data[0]["parent"]}
           childOne = {results.data[0]["child"]}
           genre = {results.data[0]["name"]}
           song = {Medieval}
-          info = {results.data[0]["description"]}*/
-          parent = "By: Jakob R., Maxwell T., Taylor C."
+          info = {results.data[0]["description"]}
+          /*parent = "By: Jakob R., Maxwell T., Taylor C."
           childOne = "Click here to start!"
           genre = "Duo: Music Bubbles"
           song = {starter}
-          info = "A brief history of classical music illustrated by bubbles!"
+          info = "A brief history of classical music illustrated by bubbles!"*/
         />
       </div>
     );

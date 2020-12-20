@@ -27,7 +27,6 @@ const bubbles = `name,description,audio file name,parent,child
 "Thanks for watching!","Design: Taylor Che; Development: Jakob Reinwald, Maxwell Tsao","./audio/starter.mp3","Go Back",""
 `;
 const list = readString(bubbles, {header:true});
-var currentRow = -1;
 const MAX_GENRES = 9;
 
 function BigBubble(props){
@@ -49,40 +48,17 @@ function BigBubble(props){
         }
     }
 
-    function getOldBubble(props){
-        currentRow--; //place where changing currentRow will happen
-        if(currentRow > -1)
-        {
-            setParentsName(list.data[currentRow]["parent"]);
-            setChildOneName(list.data[currentRow]["child"]);
-            setMainName(list.data[currentRow]["name"]);
-            setMusicInfo(list.data[currentRow]["description"]);
-            /*updateSong(list.data[currentRow]["audio file name"]);*/
-            updateSong(songs[currentRow]);
-            console.log("clicked");
-        }
-        else
-        {
-            (currentRow++);
-        }
-    }
-    
-    //get the next bubble and change the state for all bubbles
-    //currently doesnt do that. place holder for now. needs some sort of array handling
-    function getNewBubble(props){
-        currentRow++; //place where changing currentRow will happen
-        if(currentRow < MAX_GENRES)
-        {
-            setParentsName(list.data[currentRow]["parent"]);
-            setChildOneName(list.data[currentRow]["child"]);
-            setMainName(list.data[currentRow]["name"]);
-            setMusicInfo(list.data[currentRow]["description"]);
-            updateSong(songs[currentRow]);
-            console.log("clicked");
-        }
-        else
-        {
-            (currentRow--);
+    function getSpecificBubble(props){
+        console.log(props);
+        for(var i = 0; i < MAX_GENRES; i++){
+            if(list.data[i]["name"] === props){
+                setParentsName(list.data[i]["parent"]);
+                setChildOneName(list.data[i]["child"]);
+                setMainName(list.data[i]["name"]);
+                setMusicInfo(list.data[i]["description"]);
+                updateSong(songs[i]);
+                console.log("clicked");
+            }
         }
     }
 
@@ -90,7 +66,7 @@ function BigBubble(props){
 
         <SmallBubble
                 title={parentsName}
-                onClick={getOldBubble}
+                onClick={getSpecificBubble}
         />
 
 
@@ -111,7 +87,7 @@ function BigBubble(props){
 
          <SmallBubble
             title={childOneName}
-            onClick={getNewBubble}
+            onClick={getSpecificBubble}
         />
 
     </div>
