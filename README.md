@@ -7,6 +7,8 @@ We're still in the early stages of our journey through cataloging our musical od
 
 # instructions
 You can view a regularly updated version at [*Duo*](https://tsaomaxwell.github.io/music-bubbles-2/) 
-If you would prefer to directly access the program, please set up the React environment and then run 
+If you would prefer to directly access the program, please set up the React environment and then run: 
+
 >npm start
-in the music_bubbles folder to view on your device after downloading. 
+
+In the music_bubbles folder to view on your device after downloading. 
