@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import XButton from './XButton.js';
 import StartGenreButton from './StartGenreButton.js';
+import SearchBar from './SearchBar.js';
 
 function Homepage(props){
-    return <div className = 'main'>
+   return (
+   <div className = 'main'>
         <XButton className = 'exit'
             onClick = {props.getOverview}
         />
@@ -25,6 +27,8 @@ function Homepage(props){
         <SearchBar
             onClick = {props.getBigBubble}
         />
-        <PlayButton/>
     </div>
+    )
 }
+
+export default Homepage;

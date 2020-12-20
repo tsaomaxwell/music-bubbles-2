@@ -1,9 +1,15 @@
 import './App.css';
+import React, { useState } from 'react';
 import BigBubble from './components/BigBubble';
+import Homepage from './components/Homepage';
 import { readString } from 'react-papaparse';
 import Medieval from './audio/JeVivroieLiement-GuillaumeDeMachaut.mp3'
 import starter from './audio/starter.mp3'
 function App() {
+  const [page, setPage] = useState("Home"); 
+  function getBigBubble(props){
+    setPage(props.page);
+  }
 
   const bubbles = `name,description,audio file name,parent,child
 "Medieval","Created Western classical nomenclature, i.e. Music Theory. (500-1420)","../audio/JeVivroieLiement-GuillaumeDeMachaut.mp3","","Renaissance"
@@ -14,24 +20,38 @@ function App() {
 "Romantic","Intense, emotional, Opera-tic: Exaggeration is the name, and Tchaikofsky is a brain. (1800-1910)","../audio/CarmenOverture-Bizert.mp3","Early Romantic","Impressionist"
 "Impressionist","Colorful, atonal, and valuing the artist's voice above all else. (1890-1925)","../audio/ClairDeLune-ClaudeDebussy","Romantic","Postmodern/Contemporary"
 "Postmodern/Contemporary","Begone limitations, it's our time to stretch the horizons. (1950-Present)","../audio/StringQuartetNo8-BenJohnston.mp3","Impressionist",""`;
-const results = readString(bubbles, {header:true});
-/*var source = new Audio(results.data[0]["audio file name"]); //Doesnt work as intended yet */
-  return (
-    <div className="App">
-      <BigBubble 
-        /*parent = {results.data[0]["parent"]}
-        childOne = {results.data[0]["child"]}
-        genre = {results.data[0]["name"]}
-        song = {Medieval}
-        info = {results.data[0]["description"]}*/
-        parent = "By: Jakob R., Maxwell T., Taylor C."
-        childOne = "Click here to start!"
-        genre = "Duo: Music Bubbles"
-        song = {starter}
-        info = "A brief history of classical music illustrated by bubbles!"
+  const results = readString(bubbles, {header:true});
+  /*var source = new Audio(results.data[0]["audio file name"]); //Doesnt work as intended yet */
+  if(page === "Home"){
+    return ( 
+      <div>
+      <Homepage
+        getBigBubble = {getBigBubble}
+        name1 = "Classical"
+        name2 = "Pop"
+        name3 = "Rock"
       />
     </div>
-  );
+      )
+  }
+  else{
+    return (
+      <div className="App">
+        <BigBubble 
+          /*parent = {results.data[0]["parent"]}
+          childOne = {results.data[0]["child"]}
+          genre = {results.data[0]["name"]}
+          song = {Medieval}
+          info = {results.data[0]["description"]}*/
+          parent = "By: Jakob R., Maxwell T., Taylor C."
+          childOne = "Click here to start!"
+          genre = "Duo: Music Bubbles"
+          song = {starter}
+          info = "A brief history of classical music illustrated by bubbles!"
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
