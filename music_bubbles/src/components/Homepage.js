@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import XButton from './XButton.js';
 import StartGenreButton from './StartGenreButton.js';
 import SearchBar from './SearchBar.js';
+import './Homepage.css'
 
 function Homepage(props){
    return (

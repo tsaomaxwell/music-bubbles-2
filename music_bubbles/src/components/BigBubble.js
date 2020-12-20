@@ -48,6 +48,7 @@ function BigBubble(props){
         }
     }
 
+    //will change to binary search later
     function getSpecificBubble(props){
         console.log(props);
         for(var i = 0; i < MAX_GENRES; i++){

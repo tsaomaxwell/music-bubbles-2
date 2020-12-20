@@ -1,0 +1,37 @@
+.main {
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #e5e5e5;
+  box-shadow: 2px 4px 9px 2px rgba(0, 0, 0, 0.08),
+    inset -2px 4px 4px 4px rgba(255, 255, 255, 0.07);
+
+  position: absolute;
+  width: 829px;
+  height: 753px;
+  border-radius: 40px;
+}
+.exit {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 339px;
+  top: 212px;
+
+  /* green */
+
+  background: #62c370;
+}
+
+.textbox {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  text-align: center;
+
+  color: #000000;
+}
